@@ -1,0 +1,130 @@
+\documentclass[14pt, aspectratio=169]{beamer}
+\usetheme{Madrid}
+\usecolortheme{beaver}
+\usepackage{fontspec}
+\title[Bibliometric Analysis IJPH]{Bibliometric Analysis of the Indian Journal of Public Health (1961–2021) }
+\author[Dr Soumalya Ray]{Dr. Soumalya Ray}
+\institute[ ]{  Assistant Professor \\
+Department of Community Medicine \\
+College of Medicine and Sagore Dutta Hospital \\
+Kamarhati, Kolkata - 700058}
+\date{}
+
+\setmainfont{Merriweather}
+
+\begin{document}
+\setbeamertemplate{caption}{\raggedright\insertcaption\par}
+\maketitle
+
+\begin{frame}
+\frametitle{Introduction}
+\begin{itemize}
+  \item IJPH – peer-reviewed, quarterly, indexed journal \footnote{1. Indian Journal of Public Health [Internet]. Ijph.in. 2022 [cited 16 September 2022]. Available from: https://www.ijph.in/}
+  \item Bibliometric Analysis: “the application of mathematical and statistical methods to books and other media” \footnote{2. Pritchard A. Statistical bibliography or bibliometrics. Journal of documentation. 1969;25:348.}
+  \item Objectives:- 
+  \begin{itemize}
+    \item To find out the distribution of number of published articles in IJPH during the reference period (1961 – 2021) 
+    \item To assess the authorship pattern in IJPH during 1961 – 2021 
+    \item To find out the distribution of citation for the articles published in IJPH during 1961 – 2021 
+  \end{itemize}
+\end{itemize}
+  
+\end{frame}
+
+\begin{frame}
+  \frametitle{Methods}
+  \begin{itemize}
+    \item Study type \& Design: Descriptive type of observational study 
+    \item Study Period: 1961 to 2021 (Reference Period)
+    \begin{itemize}
+      \item Data Collection Period: July 1st to July 9th, 2022. 
+    \end{itemize}
+    \item Study Units: All articles published in IJPH
+    \item Data Extraction Plan
+    \begin{figure}
+      \includegraphics[width=0.75\textwidth]{dataExtract.png}
+    \end{figure}
+    \item Variables: Title, Author names, Citation count, publication year
+    \item Data Analysis: R, open source statistical language.  
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Figure 1: Year wise distribution of articles published in IJPH (n = 2470) }
+  \begin{figure}
+    \begin{center}
+      \includegraphics[width=0.94\textwidth, height=0.42\textwidth]{articletime.png}
+     \end{center}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Figure 2: Ridgeline plot depicting the yearwise contribution of most contributed authors in IJPH (1961-2021)}
+  \begin{figure}
+    \begin{center}
+      \includegraphics[width=0.74\textwidth, height=0.35\textwidth]{ridgeline.png}
+     \end{center}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Figure 3: Distribution of number of authors per article in IJPH (1961-2021)}
+  \begin{figure}
+    \begin{center}
+      \includegraphics[width=0.94\textwidth, height=0.42\textwidth]{authorcount.png}
+     \end{center}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Figure 4: Bar diagram depicting the distribution of most cited articles in IJPH (1961 – 2021)}
+  \begin{figure}
+    \begin{center}
+      \includegraphics[width=0.94\textwidth, height=0.42\textwidth]{maxcite_modified.png}
+     \end{center}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Figure 5: Time distribution of the median number of citation per year in IJPH (1961 – 2021)}
+  \begin{figure}
+    \begin{center}
+      \includegraphics[width=0.94\textwidth, height=0.42\textwidth]{medianCitation.png}
+     \end{center}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Conclusion}
+  \begin{itemize}
+    \item See-saw pattern 
+    \item Slow down in growth after 2006\footnote{Fire M, Guestrin C. Over-optimization of academic publishing metrics: observing Goodhart’s Law in action. GigaScience. 2019 Jun;8(6):giz053.}
+    \item Shifting pattern in the total number of authors\footnote{Das N, Das S. Author Contribution Details' and not'Authorship Sequence'as a merit to determine credit: A need to relook at the current Indian practice. National Medical Journal of India. 2020 Jan 1;33(1).}
+    \item Recent impetus on Sponsored Issues
+    \item Limitations: Dependence on Pubmed and Google Scholar
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Future Scope}
+  \begin{itemize}
+    \item Co-authorship analysis
+    \item Co-citation analysis
+    \item Timewise distribution of topics and keywords. 
+  \end{itemize}
+  \begin{columns}[c]
+    \begin{column}{0.5\textwidth}
+      \begin{figure}
+      \includegraphics[width=0.35\textwidth]{githubsource.png}
+      \caption{Dataset \& R script}
+      \end{figure}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{figure}
+      \includegraphics[width=0.35\textwidth]{qrPersonalDetails.png}
+      \caption{Thank You}
+      \end{figure}
+    \end{column}
+  \end{columns}
+\end{frame}
+\end{document}
