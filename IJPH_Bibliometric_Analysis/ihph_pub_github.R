@@ -1,18 +1,10 @@
 #IJPH assessment
-#library(readxl)
-#ijph_orig <- read_excel("Project/frailty/buh/pop/IJPH_Bibliometric_Pubmed.xlsx",
-#                        sheet = "csv-indianjour-set(2)", 
-#                        col_types = c("blank","text", "blank", "blank", 
-#                                      "blank","blank", "numeric", "blank", 
-#                                      "blank","blank", "blank", "numeric", 
-#                                      "text","text", "text", "text", "text", 
-#                                      "text","text", "text", "text", "text", 
-#                                      "text","numeric", "text", "text"))
 library(data.table)
+library(R.utils)
 library(ggplot2)
 library(scales)
 library(ggridges)
-ijph_orig <- fread(cmd = 'unzip -cq https://github.com/raysoumalya/RPublichealth/blob/main/IJPH_Bibliometric_Analysis/IJPH_Bibliometric_Pubmed.zip')
+ijph_orig <- fread("https://github.com/raysoumalya/RPublichealth/raw/main/IJPH_Bibliometric_Analysis/IJPH_Bibliometric_Pubmed.csv.gz")
 ijph_orig <- setDT(ijph_orig)[`Publication Year`<2022,]
 #class(ijph_orig)
 ijph_orig[,suppl:=fifelse(`Type_Journal_Issue`=="suppl",1,0)]
